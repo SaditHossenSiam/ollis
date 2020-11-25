@@ -1,0 +1,29 @@
+// Font Family
+$mukta:'Mukta',
+sans-serif;
+$open:'Open Sans',
+sans-serif;
+$pinyon: 'Pinyon Script',
+cursive;
+// Colors ---------------
+$black:#181818;
+$black-washed:#ffffff1a;
+$white:#ffffff;
+$golden:#B19777;
+$grey:#f7f7f7;
+$grey-2:#f9f9f9;
+$grey-3:#ffffff8c;
+// Background Colors ---------------
+$grey-bg:rgba(255, 255, 255, 0.55);
+$grey-bg-2:#f3f3f3;
+$black-light:rgba(0, 0, 0, 0.8);
+$footer-bottom-bg:#121212;
+// Heading Color
+// Soft color
+// Responsive Variables
+$xxl: 'only screen and (min-width: 1400px)';
+$xl: 'only screen and (min-width: 1200px) and (max-width: 1399.98px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199.98px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991.98px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767.98px)';
+$xs:'(max-width: 575.98px)';

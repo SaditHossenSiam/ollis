@@ -1,0 +1,105 @@
+/*----------------------------------------
+    03. Slider CSS
+/*----------------------------------------*/
+
+.slider-area {
+    position: relative;
+    & button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 24px;
+        background: $white;
+        z-index: 2;
+    }
+    & .slick-prev {
+        right: 81px;
+    }
+}
+
+.slider-height {
+    height: 700px;
+}
+
+.slider__content {
+    text-align: center;
+    & h1 {
+        font-size: 130px;
+        line-height: 1;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $golden;
+        margin-bottom: 10px;
+        & span {
+            color: $white;
+        }
+    }
+    & p {
+        font-size: 14px;
+        color: $white;
+        padding: 0 400px;
+        margin-bottom: 50px;
+        line-height: 30px;
+    }
+}
+
+.slider__content-2 {
+    position: relative;
+    z-index: 1;
+    & h1 {
+        font-size: 80px;
+        text-transform: capitalize;
+        color: $black;
+        & span {
+            color: $golden;
+        }
+    }
+    & p {
+        padding: 0 !important;
+        color: $black;
+    }
+}
+
+.slider__thumb {
+    position: relative;
+    z-index: 1;
+}
+
+.slider__social {
+    position: absolute;
+    z-index: 2;
+    right: 60px;
+    top: 60%;
+    @include transform(translateY(-50%));
+    & ul li {
+        display: block;
+        margin-bottom: 4rem;
+        & a {
+            color: $white;
+            &:hover {
+                color: $golden;
+            }
+        }
+    }
+}
+
+.furniture {
+    font-size: 250px;
+    color: $grey-2;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    -webkit-text-fill-color: $grey-2;
+    position: absolute;
+    line-height: 1;
+    text-transform: uppercase;
+    z-index: 0;
+    font-weight: 900;
+}
+
+.furniture-2 {
+    color: $black;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    -webkit-text-fill-color: $black;
+}

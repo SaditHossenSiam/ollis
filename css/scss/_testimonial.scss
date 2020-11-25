@@ -1,0 +1,52 @@
+/*----------------------------------------
+    13. Testimonial CSS
+/*----------------------------------------*/
+
+.testimonial__content {
+    & .testi__quote {
+        font-size: 50px;
+        color: $golden;
+    }
+    & p {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+}
+
+.testimonial__info {
+    & .author__avatar {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        margin-bottom: 12px;
+        @include border-radius(50%);
+        & img {
+            width: 100%;
+            height: 100%;
+            @include border-radius(50%);
+        }
+    }
+    & h4 {
+        margin-bottom: 0;
+    }
+    & span {
+        color: $golden;
+        font-size: 15px;
+    }
+}
+
+.testimonial__wrapper {
+    & .owl-nav {
+        text-align: center;
+        margin-top: 100px;
+        & button {
+            background: #fff;
+            font-size: 24px;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            margin: 0 1px;
+        }
+    }
+}

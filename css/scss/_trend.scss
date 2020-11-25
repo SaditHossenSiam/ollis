@@ -1,0 +1,33 @@
+/*----------------------------------------
+    07. Trend CSS
+/*----------------------------------------*/
+
+.bg__wrapper {
+    & .bg__img {
+        left: 0;
+        top: 0;
+    }
+    & blockquote {
+        margin-left: 160px;
+        margin-top: 50px;
+        & p {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+
+.img-2 {
+    left: -36px;
+    top: 0;
+}
+
+.img-3 {
+    bottom: 0;
+    left: 150px;
+}
+
+.img-4 {
+    bottom: 0;
+    right: 0;
+}

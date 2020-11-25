@@ -1,0 +1,30 @@
+/*----------------------------------------
+    19. Client CSS
+/*----------------------------------------*/
+
+.client-area {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.client-item {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    & a img {
+        max-height: 80px;
+    }
+    & .client__thumb-2 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        @include transform(translate3d(-50%, -100%, 0));
+    }
+    &:hover {
+        & .client__thumb-2 {
+            @include transform(translate3d(-50%, 0%, 0));
+        }
+        & .client__thumb {
+            @include transform(translateY(100%));
+        }
+    }
+}

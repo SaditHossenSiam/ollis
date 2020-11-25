@@ -1,0 +1,16 @@
+/*----------------------------------------
+    10. Attention CSS
+/*----------------------------------------*/
+
+.attention__wrapper {
+    &::before {
+        position: absolute;
+        content: '';
+        background: url(/img/home-1/main-about-dots.png);
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100%;
+        z-index: -1;
+    }
+}

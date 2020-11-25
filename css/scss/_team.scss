@@ -1,0 +1,46 @@
+/*----------------------------------------
+    12. Team CSS
+/*----------------------------------------*/
+
+.team-item {
+    & .team__thumb {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        @include transition(.3s);
+        & img {
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            @include transition(.3s);
+        }
+        &:hover {
+            border: 1px solid rgba(0, 0, 0, 1);
+            & img {
+                filter: grayscale(0);
+                -webkit-filter: grayscale(0);
+            }
+        }
+    }
+    & .team__content {
+        & a {
+            &:hover {
+                color: $golden;
+            }
+        }
+        & span {
+            font-size: 15px;
+            font-weight: 700;
+            color: $golden;
+        }
+    }
+}
+
+.team-area-2 {
+    & .section__title {
+        & h2 {
+            color: $white;
+        }
+        &>span {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/* ==============================================
+ ============RESPONSIVE START HERE==============
+=================================================*/
+
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+
+@media (min-width: 1400px) {}
+
+
+/* XL Device :1200px.
+.col-xl- (xlarge devices - screen width equal to or greater than 1200px---(>=1200px)) */
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {}
+
+
+/* LG Device :992px. 
+.col-lg- (large devices - screen width equal to or greater than 992px---(>=992px)) 
+Large devices (desktops, less than 1200px)*/
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+
+/* MD Device :768px.
+.col-md- (medium devices - screen width equal to or greater than 768px---(>=768px)) 
+ Medium devices (tablets, less than 992px)*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+
+/* SM Small Device :550px.
+.col-sm- (small devices - screen width equal to or greater than 576px---(>=576px)) 
+Small devices (landscape phones, 576px and up)*/
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {}
+
+
+/* SM Small Device :360px.
+ X-Small devices (portrait phones, less than 576px) */
+
+@media only screen and (min-width: 360px) and (max-width: 575.98px) {}

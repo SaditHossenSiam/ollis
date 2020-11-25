@@ -1,0 +1,36 @@
+/*----------------------------------------
+    11. Skill CSS
+/*----------------------------------------*/
+
+.skill-item {
+    & h3 {
+        color: $white;
+    }
+    & p {
+        color: $grey-bg;
+    }
+}
+
+svg.radial-progress {
+    height: auto;
+    max-width: 250px;
+    padding: 1em;
+    transform: rotate(-90deg);
+    width: 100%;
+    & circle {
+        fill: transparent;
+        stroke: $golden;
+        stroke-dashoffset: 219.91148575129;
+        stroke-width: 3;
+        &.incomplete {
+            opacity: 0.25;
+        }
+        &.complete {
+            stroke-dasharray: 219.91148575129;
+        }
+    }
+    & text {
+        fill: $white;
+        text-anchor: middle;
+    }
+}

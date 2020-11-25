@@ -1,0 +1,92 @@
+/*----------------------------------------
+    17. Footer CSS
+/*----------------------------------------*/
+
+.footer__title {
+    & h3 {
+        color: $golden;
+        font-size: 28px;
+        position: relative;
+        padding-bottom: 10px;
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(to right, $golden 0%, $golden 24%, $black-washed 24%, $black-washed 66%, $black 66%, $black 100%);
+        }
+    }
+}
+
+.footer__content {
+    & p {
+        color: $grey;
+    }
+    & .footer__contact {
+        & .footer__icon {
+            color: $golden;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        & .footer__text {
+            color: $golden;
+            & a {
+                display: block;
+                font-size: 24px;
+                color: $white;
+            }
+        }
+    }
+    & .footer__social {
+        & li {
+            margin-right: 20px;
+            & a {
+                color: $golden;
+            }
+        }
+    }
+    & .list-item {
+        & li {
+            margin-bottom: 10px;
+            width: 49%;
+            & i {
+                color: $golden;
+            }
+            & a {
+                color: $white;
+                text-transform: capitalize;
+                padding-left: 10px;
+                &:hover {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+    & .instafid {
+        & li {
+            width: 33.33%;
+            margin-bottom: 10px;
+            padding-right: 10px;
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    & p {
+        color: $white;
+        margin-bottom: 0;
+        & a {
+            color: $golden;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

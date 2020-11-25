@@ -1,0 +1,271 @@
+/*----------------------------------------
+    02. Header CSS
+/*----------------------------------------*/
+
+.header-transparent {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    background: transparent;
+    z-index: 2;
+}
+
+.header-transparent-2 {
+    @extend .header-transparent;
+    position: relative;
+    top: 0;
+    background: $white;
+    padding: 30px 0;
+}
+
+.logo {
+    display: inline-block;
+    & a {
+        display: block;
+    }
+}
+
+.main-menu {
+    & ul {
+        & li {
+            margin-right: 20px;
+            position: relative;
+            padding: 10px 0;
+            &:hover {
+                & .submenu {
+                    visibility: visible;
+                    opacity: 1;
+                    top: 100%;
+                }
+            }
+            & a {
+                font-size: 1.6rem;
+                text-transform: capitalize;
+                font-weight: 700;
+                padding: 0 12px;
+                position: relative;
+                display: block;
+                color: $white;
+                & i {
+                    color: $golden;
+                    @include transition(.4s);
+                }
+                &.active {
+                    border-left: 1px solid $golden;
+                    border-right: 1px solid $golden;
+                    color: $golden;
+                    & i {
+                        @include transform(rotate(90deg));
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 6px;
+                        background: $golden;
+                        height: 1px;
+                        left: 0;
+                        top: 0;
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 6px;
+                        background: $golden;
+                        height: 1px;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+                &:hover {
+                    & i {
+                        @include transform(rotate(90deg));
+                    }
+                    &:hover {
+                        color: $golden;
+                    }
+                }
+            }
+            & .submenu {
+                position: absolute;
+                width: 300px;
+                background: $white;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 200%;
+                visibility: hidden;
+                opacity: 0;
+                @include transition(.3s);
+                & li {
+                    display: block;
+                    margin-right: 0;
+                    & a {
+                        display: block;
+                        padding: 12px;
+                        padding-left: 24px;
+                        color: $black;
+                        &:hover {
+                            background: $golden;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        & li:last-child {
+            & .submenu {
+                position: absolute;
+                width: 800px;
+                left: 0;
+                padding: 30px;
+                & span {
+                    float: left;
+                    width: 25%;
+                    & a {
+                        margin-bottom: 4px;
+                        padding: 12px;
+                        color: $black;
+                        & i {
+                            margin-right: 5px;
+                        }
+                        &:hover {
+                            background: $golden;
+                            color: $white;
+                            & i {
+                                @include transform(rotate(0deg));
+                                color: $white;
+                            }
+                        }
+                    }
+                    & a.mega-title {
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                        &:hover {
+                            background: transparent;
+                            color: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header__right--inner {
+    & a {
+        font-size: 18px;
+        color: $white;
+        margin: 0 20px;
+        &:hover {
+            color: $golden;
+        }
+    }
+    & .search-expanded {
+        font-size: 18px;
+        background: 0;
+        color: $white;
+        &:hover {
+            color: $golden;
+        }
+    }
+}
+
+.header-bar {
+    display: block;
+    cursor: pointer;
+    & span {
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        display: block;
+        margin: 5px 0;
+    }
+    & span:nth-child(2) {
+        width: 15px;
+    }
+    & span:nth-child(3) {
+        width: 10px;
+        margin-left: 10px;
+    }
+    &:hover {
+        & span:nth-child(2) {
+            width: 20px;
+        }
+        & span:nth-child(3) {
+            width: 20px;
+            margin-left: 0px;
+        }
+    }
+}
+
+.search-area {
+    right: 85px;
+    z-index: 2;
+    top: 10px;
+    display: none;
+    &.open {
+        display: block;
+    }
+    & form {
+        & input {
+            background: #f7f7f7;
+            padding: 12px 24px;
+            position: relative;
+            font-size: 16px;
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+        & .close-input {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            font-size: 18px;
+        }
+    }
+}
+
+.scroll-top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    border: 1px solid $golden;
+    z-index: 3;
+    & a {
+        width: 70px;
+        height: 70px;
+        color: $golden;
+        font-size: 15px;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 10px 12px;
+    }
+}
+
+.main-menu-2 {
+    & ul {
+        & li {
+            & a {
+                color: $black;
+            }
+            & .submenu {
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+
+.header__right--inner-2 {
+    & a {
+        color: $black;
+    }
+    & .search-expanded {
+        color: $black;
+    }
+}
+
+.search-area-2 {
+    top: 30px;
+}

@@ -1,0 +1,75 @@
+/*----------------------------------------
+    08. Pricing CSS
+/*----------------------------------------*/
+
+.pricing-area {
+    &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    }
+}
+
+.pricing-item {
+    background: $white;
+    padding: 80px 40px 40px;
+    text-align: center;
+    &.popular-item {
+        background: transparent;
+        & .popular {
+            & span {
+                position: absolute;
+                right: -50px;
+                top: -10px;
+                background: $golden;
+                width: 150px;
+                @include transform(rotate(45deg));
+                height: 70px;
+                padding-top: 40px;
+                font-size: 14px;
+                color: $white;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+        & h2 {
+            color: $white;
+        }
+        & ul {
+            & li {
+                color: $white;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+    & h3 {
+        color: $golden;
+        margin-bottom: 20px;
+        font-size: 27px;
+    }
+    & h2 {
+        font-size: 64px;
+        & sup {
+            font-size: 36px;
+        }
+    }
+    & ul {
+        margin: 40px 0;
+        & li {
+            display: block;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            &:last-child {
+                margin: 0;
+                padding: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+}

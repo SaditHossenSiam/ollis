@@ -1,0 +1,27 @@
+/*----------------------------------------
+    17. FAQ CSS
+/*----------------------------------------*/
+
+.faq-item {
+    text-align: center;
+    &:hover {
+        & .faq__icon {
+            @include transform(translateY(-10px));
+        }
+    }
+}
+
+.faq__icon {
+    margin-bottom: 20px;
+    display: block;
+    & i::before {
+        font-size: 80px;
+        color: $golden;
+    }
+}
+
+.faq__content {
+    & h4 {
+        margin-bottom: 15px;
+    }
+}

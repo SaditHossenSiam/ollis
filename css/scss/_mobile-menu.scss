@@ -1,0 +1,151 @@
+/*----------------------------------------
+    00. Mobile CSS
+/*----------------------------------------*/
+
+.sidebar-info {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    z-index: 3;
+    overflow-y: scroll;
+    @include transition(.3s);
+}
+
+.sidebar-info.opend {
+    right: 0;
+}
+
+.sidebar-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.close-icon {
+    @extend .sidebar-logo;
+    left: auto;
+    right: 20px;
+    font-size: 24px;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+#mobile-menu-active {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+    width: 350px;
+    & ul {
+        & li {
+            position: relative;
+            display: block;
+            & a {
+                font-size: 28px;
+                text-transform: capitalize;
+                font-weight: 600;
+                display: block;
+            }
+            & .submenu {
+                & li {
+                    padding-left: 10px;
+                    & a {
+                        font-size: 20px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        display: block;
+                        &::before,
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        width: 5px;
+                        height: 1px;
+                        background: $golden;
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        & a {
+                            padding-left: 10px;
+                            color: $golden;
+                        }
+                    }
+                }
+            }
+        }
+        & li.has-dropdown {
+            & a {
+                position: relative;
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: '';
+                    right: 0;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    width: 20px;
+                    height: 2px;
+                    background: $black;
+                }
+                &::after {
+                    width: 2px;
+                    height: 20px;
+                    right: 9px;
+                }
+                &[aria-expanded="true"]::after {
+                    display: none;
+                }
+            }
+        }
+        & li:last-child {
+            & .submenu {
+                position: absolute;
+                width: 800px;
+                left: 0;
+                & span {
+                    float: left;
+                    width: 25%;
+                    & a.mega-title {
+                        font-size: 20px;
+                        margin-bottom: 5px;
+                        &:hover {
+                            background: transparent;
+                            color: inherit;
+                        }
+                    }
+                    & a {
+                        margin-bottom: 4px;
+                        padding: 12px;
+                        color: $black;
+                        font-size: 18px;
+                        & i {
+                            margin-right: 5px;
+                        }
+                        &:hover {
+                            background: $golden;
+                            color: $white;
+                            & i {
+                                @include transform(rotate(0deg));
+                                color: $white;
+                            }
+                        }
+                        &::before,
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
